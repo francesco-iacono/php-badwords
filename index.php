@@ -2,6 +2,7 @@
 
   $nome = "Dante";
   $cognome = "Alighieri";
+  $badWord = $_GET["badWord"];
 
   $text = "Nel mezzo del cammin di nostra vita
   mi ritrovai per una selva oscura,
@@ -29,7 +30,7 @@
     <p><?php echo $text; ?></p>
     <!-- sostituire la badword passata in GET con tre * -->
     <h3>Frase Censurata</h3>
-    <p><?php echo str_replace("malvagio", "***", $text); ?></p>
+    <p><?php echo str_replace($badWord, "***", $text); ?></p>
     <!-- lunghezza stringa -->
     <p>Lunghezza stringa: <?php echo strlen($text); ?></p>
   </body>
